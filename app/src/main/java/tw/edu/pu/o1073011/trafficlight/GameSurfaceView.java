@@ -146,7 +146,7 @@ public class GameSurfaceView extends SurfaceView implements SurfaceHolder.Callba
         RedLightSec = RedSec;
     }
 
-    
+
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 
