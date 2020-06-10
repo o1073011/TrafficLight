@@ -2,18 +2,23 @@ package tw.edu.pu.o1073011.trafficlight;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.drm.DrmStore;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity{
 
     GameSurfaceView GameSV;
     Handler handler;
+    Intent it;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +35,9 @@ public class GameActivity extends AppCompatActivity {
 
         //設定螢幕為橫式
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
         setContentView(R.layout.activity_game);
-        Intent it = getIntent();
+
+        it = getIntent();
         String GreenSec = it.getStringExtra("GreenSec");
         String YellowSec = it.getStringExtra("YellowSec");
         String RedSec = it.getStringExtra("RedSec");
@@ -40,6 +45,7 @@ public class GameActivity extends AppCompatActivity {
         int green = Integer.valueOf(GreenSec);
         int yellow = Integer.valueOf(YellowSec);
         int red = Integer.valueOf(RedSec);
+
         GameSV = (GameSurfaceView) findViewById(R.id.GameSV);
 
         //設定初始測試之燈號秒數
@@ -69,7 +75,10 @@ public class GameActivity extends AppCompatActivity {
             GameSV.drawSomething(canvas);
             GameSV.getHolder().unlockCanvasAndPost(canvas);
             handler.postDelayed(runnable, 50);
+
         }
     };
+
+
 
 }
