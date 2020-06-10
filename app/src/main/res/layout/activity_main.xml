@@ -30,33 +30,33 @@
         app:layout_constraintStart_toEndOf="@+id/btnStart" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         android:text="綠燈秒數"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toStartOf="@+id/yellow"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/yellow"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toStartOf="@+id/red"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toEndOf="@+id/green"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="黃燈秒數" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -65,7 +65,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toEndOf="@+id/yellow" />
 
     <TextView
         android:layout_width="wrap_content"
